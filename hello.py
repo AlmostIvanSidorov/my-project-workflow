@@ -1,32 +1,12 @@
 #!/usr/bin/python3
 
-from testflows.core import *
-
-
-@TestScenario
-def not_hello(self):
-    with Given("Not Hello"):
-        assert("hello" == "world")
-
-
-@TestScenario
-def hello(self):
-    with Given("Hello"):
-        for i in range(3):
-            assert("hello" !=  "world");
-
-@TestModule
-def regression(self):
-    Scenario(run=not_hello)
-    Scenario(run=hello)
-    Scenario(run=not_hello)
-
 
 def main():
-   regression()
-
+   your_name = input("Please enter your name:")
+   return f"Hello {your_name}, glad to see you!"
 
 if __name__ == '__main__':
-    main()
+    hello_string = main()
+    print(hello_string)
 
 
